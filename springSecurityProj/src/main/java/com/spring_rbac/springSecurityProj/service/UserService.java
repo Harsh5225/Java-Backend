@@ -9,4 +9,5 @@ public interface UserService {
     User saveUser(User user);
     User getUserByUsername(String username);
     List<User>getAllUsers();
+    User registerNewUser(String name, String email, String password);
 }
