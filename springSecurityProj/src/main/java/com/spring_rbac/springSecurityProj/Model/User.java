@@ -17,6 +17,8 @@ public class User {
     @Column(nullable = false,unique = true)
     private  String email;
 
+    @Column(nullable = false)
+    private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
@@ -63,7 +65,17 @@ public class User {
         return roles;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
     }
+
+
 }
